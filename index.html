@@ -4,916 +4,279 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Deepspace Lovely Haven ✦</title>
+    <title>Deepspace Lovely Haven</title>
 
     <style>
-        * {
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
-
         body {
             margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f4f0f8;
-            color: #292333;
+            font-family: Arial, sans-serif;
+            background-color: #f4eff8;
+            color: #333;
         }
 
-        /* =========================
-           HEADER
-        ========================= */
-
         header {
-            min-height: 430px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
             text-align: center;
-            padding: 50px 20px;
-
-            background:
-                radial-gradient(circle at 20% 30%, rgba(255,255,255,0.25) 0 2px, transparent 3px),
-                radial-gradient(circle at 70% 20%, rgba(255,255,255,0.3) 0 2px, transparent 3px),
-                radial-gradient(circle at 40% 80%, rgba(255,255,255,0.2) 0 2px, transparent 3px),
-                linear-gradient(135deg, #161225, #35284b, #6b557c);
-
-            background-size: 150px 150px, 190px 190px, 220px 220px, cover;
-
+            background-color: #5b476b;
             color: white;
+            padding: 45px 20px;
         }
 
         header h1 {
-            font-size: 55px;
-            margin: 0 0 15px;
-            letter-spacing: 4px;
-            text-shadow: 0 0 20px rgba(255,255,255,0.5);
+            margin: 0;
+            font-size: 40px;
         }
 
         header p {
-            font-size: 20px;
-            max-width: 650px;
+            font-size: 18px;
+            margin-top: 12px;
+        }
+
+        section {
+            max-width: 700px;
+            margin: 35px auto;
+            padding: 25px;
+            background-color: white;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            color: #5b476b;
+        }
+
+        section p {
             line-height: 1.6;
         }
 
-        .header-button {
-            margin-top: 20px;
-            padding: 14px 28px;
-            border-radius: 30px;
-            border: 2px solid white;
-            background: rgba(255,255,255,0.12);
-            color: white;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.3s;
+        section img {
+            width: 180px;
+            height: 180px;
+            object-fit: contain;
+            margin-top: 10px;
+            border-radius: 10px;
+            background-color: #f4eff8;
         }
-
-        .header-button:hover {
-            background: white;
-            color: #35284b;
-            transform: scale(1.05);
-        }
-
-        /* =========================
-           NAVIGATION
-        ========================= */
-
-        nav {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 10px;
-
-            padding: 15px;
-
-            background: #171321;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.25);
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 8px 14px;
-            border-radius: 20px;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            background: #59456f;
-            color: #f3dcff;
-        }
-
-        .cart-display {
-            background: #806394;
-            padding: 8px 16px;
-            border-radius: 20px;
-            color: white;
-            font-weight: bold;
-        }
-
-        /* =========================
-           WELCOME
-        ========================= */
-
-        .welcome {
-            text-align: center;
-            padding: 65px 20px 45px;
-            max-width: 900px;
-            margin: auto;
-        }
-
-        .welcome h2 {
-            font-size: 34px;
-            margin-bottom: 20px;
-        }
-
-        .welcome p {
-            line-height: 1.8;
-            font-size: 17px;
-        }
-
-        .sparkle {
-            color: #806394;
-            font-size: 25px;
-        }
-
-        /* =========================
-           SHOP CONTROLS
-        ========================= */
 
         .shop {
-            max-width: 1200px;
-            margin: auto;
-            padding: 30px 25px 70px;
-        }
-
-        .shop-title {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 20px;
             text-align: center;
-            font-size: 36px;
-            margin-bottom: 10px;
         }
 
-        .shop-subtitle {
-            text-align: center;
-            margin-bottom: 35px;
-            color: #665c6e;
+        .shop h2 {
+            color: #5b476b;
+            font-size: 30px;
         }
-
-        .controls {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-bottom: 35px;
-        }
-
-        #searchBox {
-            width: 280px;
-            padding: 13px 18px;
-            border: 2px solid #d8c9df;
-            border-radius: 25px;
-            outline: none;
-            font-size: 15px;
-        }
-
-        #searchBox:focus {
-            border-color: #806394;
-        }
-
-        .filter-button {
-            padding: 11px 17px;
-            border: none;
-            border-radius: 20px;
-            background: #e5d9ea;
-            color: #40354b;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .filter-button:hover,
-        .filter-button.active {
-            background: #59456f;
-            color: white;
-        }
-
-        /* =========================
-           PRODUCTS
-        ========================= */
 
         .products {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 28px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 25px;
         }
 
         .product {
-            background: white;
-            border-radius: 22px;
+            width: 220px;
+            background-color: white;
             padding: 20px;
-            text-align: center;
-
-            box-shadow: 0 8px 25px rgba(50,35,60,0.12);
-
-            transition:
-                transform 0.3s,
-                box-shadow 0.3s;
-
-            position: relative;
-            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
         }
 
         .product:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 35px rgba(50,35,60,0.2);
-        }
-
-        .product::before {
-            content: "✦";
-            position: absolute;
-            top: 12px;
-            right: 17px;
-            color: #b69bc4;
-            font-size: 20px;
-        }
-
-        .product-image-container {
-            height: 260px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #f3edf6;
-            border-radius: 17px;
-            overflow: hidden;
-            margin-bottom: 18px;
+            transform: translateY(-5px);
         }
 
         .product img {
-            width: 100%;
-            height: 100%;
+            width: 200px;
+            height: 200px;
             object-fit: contain;
-            transition: transform 0.4s;
-        }
-
-        .product:hover img {
-            transform: scale(1.07);
+            background-color: #f4eff8;
+            border-radius: 10px;
         }
 
         .product h3 {
-            font-size: 23px;
-            margin: 10px 0 6px;
-        }
-
-        .character {
-            font-weight: bold;
-            color: #806394;
-        }
-
-        .description {
-            min-height: 65px;
-            line-height: 1.5;
-            color: #665c6e;
+            color: #5b476b;
+            margin-bottom: 8px;
         }
 
         .price {
-            font-size: 22px;
             font-weight: bold;
-            color: #33273d;
-            margin: 15px 0;
+            color: #7a5c8c;
         }
-
-        .button-row {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .cart-btn,
-        .favorite-btn {
-            border: none;
-            border-radius: 22px;
-            padding: 11px 17px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .cart-btn {
-            background: #59456f;
-            color: white;
-        }
-
-        .cart-btn:hover {
-            background: #362945;
-            transform: scale(1.05);
-        }
-
-        .favorite-btn {
-            background: #f0e3f4;
-            color: #59456f;
-        }
-
-        .favorite-btn:hover {
-            background: #dec6e7;
-            transform: scale(1.05);
-        }
-
-        /* =========================
-           FUN ZONE
-        ========================= */
-
-        .fun-section {
-            text-align: center;
-            padding: 70px 20px;
-
-            background:
-                radial-gradient(circle at 10% 20%, rgba(255,255,255,0.3) 0 2px, transparent 3px),
-                radial-gradient(circle at 80% 70%, rgba(255,255,255,0.3) 0 2px, transparent 3px),
-                linear-gradient(135deg, #e8dff0, #d8c9e3);
-        }
-
-        .fun-section h2 {
-            font-size: 34px;
-        }
-
-        .fun-section p {
-            font-size: 18px;
-        }
-
-        .companion-button {
-            padding: 14px 25px;
-            border: none;
-            border-radius: 25px;
-            background: #59456f;
-            color: white;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .companion-button:hover {
-            transform: scale(1.08);
-            background: #362945;
-        }
-
-        #message {
-            margin-top: 25px;
-            font-size: 24px;
-            font-weight: bold;
-            color: #59456f;
-            min-height: 35px;
-        }
-
-        /* =========================
-           CART
-        ========================= */
-
-        .cart-section {
-            padding: 60px 20px;
-            text-align: center;
-            background: #241d35;
-            color: white;
-        }
-
-        .cart-section h2 {
-            font-size: 32px;
-        }
-
-        #cartMessage {
-            color: #dfd0e7;
-            font-size: 17px;
-        }
-
-        .clear-button {
-            padding: 10px 20px;
-            border: 1px solid #d8c9df;
-            border-radius: 20px;
-            background: transparent;
-            color: white;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        .clear-button:hover {
-            background: white;
-            color: #241d35;
-        }
-
-        /* =========================
-           FOOTER
-        ========================= */
 
         footer {
             text-align: center;
-            padding: 30px 20px;
-            background: #171321;
-            color: #ddd3e2;
-            line-height: 1.6;
-        }
-
-        /* =========================
-           POPUP
-        ========================= */
-
-        #popup {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-
-            background: #35284b;
+            background-color: #5b476b;
             color: white;
-
-            padding: 16px 22px;
-            border-radius: 15px;
-
-            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-
-            opacity: 0;
-            transform: translateY(20px);
-
-            pointer-events: none;
-
-            transition: 0.3s;
-
-            z-index: 200;
+            padding: 25px;
+            margin-top: 50px;
         }
-
-        #popup.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* =========================
-           MOBILE
-        ========================= */
-
-        @media (max-width: 600px) {
-
-            header h1 {
-                font-size: 36px;
-            }
-
-            header p {
-                font-size: 16px;
-            }
-
-            .welcome h2,
-            .shop-title,
-            .fun-section h2 {
-                font-size: 28px;
-            }
-
-            .products {
-                grid-template-columns: 1fr;
-            }
-
-            #searchBox {
-                width: 100%;
-            }
-        }
-
     </style>
 </head>
 
 <body>
 
-    <!-- =========================
-         HEADER
-    ========================= -->
+    <!-- Shop Name and Tagline -->
 
     <header>
 
-        <h1>✦ DEEPSPACE MERCH ✦</h1>
+        <h1>✦ Deepspace Lovely Haven ✦</h1>
 
         <p>
-            Welcome to Deepspace Lovely Haven ♡
-            Your little corner for Love and Deepspace treasures.
+            A cozy shop for Love and Deepspace merchandise and collectibles.
         </p>
-
-        <button
-            class="header-button"
-            onclick="document.getElementById('shop').scrollIntoView()">
-            Explore the Collection ✦
-        </button>
 
     </header>
 
 
-    <!-- =========================
-         NAVIGATION
-    ========================= -->
+    <!-- Owner Section -->
 
-    <nav>
+    <section>
 
-        <a href="#home">Home</a>
-
-        <a href="#shop">Shop</a>
-
-        <a href="#fun">Fun Zone</a>
-
-        <a href="#cart">Cart</a>
-
-        <span class="cart-display">
-            🛒 <span id="cartCount">0</span>
-        </span>
-
-    </nav>
-
-
-    <!-- =========================
-         WELCOME
-    ========================= -->
-
-    <section class="welcome" id="home">
-
-        <div class="sparkle">✦ ✧ ✦</div>
-
-        <h2>Welcome, Deepspace Hunter!</h2>
+        <h2>Mazel</h2>
 
         <p>
-            Looking for something special from your favorite companions?
-            Explore our collection of cute, stylish, and collectible
-            merchandise inspired by the world of Love and Deepspace.
+            I am a Love and Deepspace fan who created this shop
+            to share fun merchandise with fellow fans.
         </p>
 
-        <p>
-            From cozy clothes to adorable collectibles,
-            there's a little something waiting for everyone. ♡
-        </p>
-
-        <div class="sparkle">✦ ✧ ✦</div>
+        <img
+            src="xavier-plushie.jfif"
+            alt="Xavier plushie from Deepspace Lovely Haven">
 
     </section>
 
 
-    <!-- =========================
-         SHOP
-    ========================= -->
+    <!-- Merchandise Section -->
 
-    <section class="shop" id="shop">
+    <div class="shop">
 
-        <h2 class="shop-title">
-            ♡ Featured Merchandise ♡
-        </h2>
+        <h2>♡ Our Merchandise ♡</h2>
 
-        <p class="shop-subtitle">
-            Choose your favorite companion and find your next treasure!
+        <p>
+            Take a look at some of the items available in our shop!
         </p>
 
 
-        <!-- SEARCH AND FILTER -->
-
-        <div class="controls">
-
-            <input
-                type="text"
-                id="searchBox"
-                placeholder="🔎 Search merchandise..."
-                onkeyup="searchProducts()"
-            >
-
-            <button
-                class="filter-button active"
-                onclick="filterProducts('all', this)">
-                All
-            </button>
-
-            <button
-                class="filter-button"
-                onclick="filterProducts('Xavier', this)">
-                Xavier
-            </button>
-
-            <button
-                class="filter-button"
-                onclick="filterProducts('Zayne', this)">
-                Zayne
-            </button>
-
-            <button
-                class="filter-button"
-                onclick="filterProducts('Rafayel', this)">
-                Rafayel
-            </button>
-
-            <button
-                class="filter-button"
-                onclick="filterProducts('Sylus', this)">
-                Sylus
-            </button>
-
-            <button
-                class="filter-button"
-                onclick="filterProducts('Caleb', this)">
-                Caleb
-            </button>
-
-        </div>
+        <div class="products">
 
 
-        <!-- PRODUCTS -->
+            <!-- Xavier -->
 
-        <div class="products" id="productList">
+            <article class="product">
 
-
-            <!-- XAVIER -->
-
-            <article class="product" data-character="Xavier">
-
-                <div class="product-image-container">
-
-                    <img
-                        src="xavier-plushie.jfif"
-                        alt="Xavier Plushie">
-
-                </div>
+                <img
+                    src="xavier-plushie.jfif"
+                    alt="Xavier plushie">
 
                 <h3>Xavier Plushie</h3>
 
-                <p class="character">
-                    ✦ Xavier
-                </p>
-
-                <p class="description">
-                    A soft little companion for your everyday adventures.
+                <p>
+                    A cute and soft plushie for Xavier fans.
                 </p>
 
                 <p class="price">
                     ₱899
                 </p>
 
-                <div class="button-row">
-
-                    <button
-                        class="cart-btn"
-                        onclick="addToCart('Xavier Plushie')">
-                        🛒 Add to Cart
-                    </button>
-
-                    <button
-                        class="favorite-btn"
-                        onclick="favorite('Xavier')">
-                        ♡
-                    </button>
-
-                </div>
-
             </article>
 
 
-            <!-- ZAYNE -->
+            <!-- Zayne -->
 
-            <article class="product" data-character="Zayne">
+            <article class="product">
 
-                <div class="product-image-container">
-
-                    <img
-                        src="zayne-hoodie.jpg"
-                        alt="Zayne Hoodie">
-
-                </div>
+                <img
+                    src="zayne-hoodie.jpg"
+                    alt="Zayne hoodie">
 
                 <h3>Zayne Hoodie</h3>
 
-                <p class="character">
-                    ❄ Zayne
-                </p>
-
-                <p class="description">
-                    A cozy hoodie for staying warm during your next mission.
+                <p>
+                    A cozy hoodie inspired by Zayne.
                 </p>
 
                 <p class="price">
                     ₱1,499
                 </p>
 
-                <div class="button-row">
-
-                    <button
-                        class="cart-btn"
-                        onclick="addToCart('Zayne Hoodie')">
-                        🛒 Add to Cart
-                    </button>
-
-                    <button
-                        class="favorite-btn"
-                        onclick="favorite('Zayne')">
-                        ♡
-                    </button>
-
-                </div>
-
             </article>
 
 
-            <!-- RAFAYEL -->
+            <!-- Rafayel -->
 
-            <article class="product" data-character="Rafayel">
+            <article class="product">
 
-                <div class="product-image-container">
-
-                    <img
-                        src="rafayel-nendoroid.jpg"
-                        alt="Rafayel Nendoroid Figure">
-
-                </div>
+                <img
+                    src="rafayel-nendoroid.jpg"
+                    alt="Rafayel figure">
 
                 <h3>Rafayel Figure</h3>
 
-                <p class="character">
-                    🌊 Rafayel
-                </p>
-
-                <p class="description">
-                    A cute collectible to bring a little artistic chaos
-                    to your shelf.
+                <p>
+                    A collectible figure for Rafayel fans.
                 </p>
 
                 <p class="price">
                     ₱1,199
                 </p>
 
-                <div class="button-row">
-
-                    <button
-                        class="cart-btn"
-                        onclick="addToCart('Rafayel Figure')">
-                        🛒 Add to Cart
-                    </button>
-
-                    <button
-                        class="favorite-btn"
-                        onclick="favorite('Rafayel')">
-                        ♡
-                    </button>
-
-                </div>
-
             </article>
 
 
-            <!-- SYLUS -->
+            <!-- Sylus -->
 
-            <article class="product" data-character="Sylus">
+            <article class="product">
 
-                <div class="product-image-container">
-
-                    <img
-                        src="sylus-perfume.webp"
-                        alt="Sylus Perfume">
-
-                </div>
+                <img
+                    src="sylus-perfume.webp"
+                    alt="Sylus perfume">
 
                 <h3>Sylus Perfume</h3>
 
-                <p class="character">
-                    🖤 Sylus
-                </p>
-
-                <p class="description">
-                    A mysterious fragrance inspired by the man himself.
+                <p>
+                    A mysterious perfume inspired by Sylus.
                 </p>
 
                 <p class="price">
                     ₱1,799
                 </p>
 
-                <div class="button-row">
-
-                    <button
-                        class="cart-btn"
-                        onclick="addToCart('Sylus Perfume')">
-                        🛒 Add to Cart
-                    </button>
-
-                    <button
-                        class="favorite-btn"
-                        onclick="favorite('Sylus')">
-                        ♡
-                    </button>
-
-                </div>
-
             </article>
 
 
-            <!-- CALEB -->
+            <!-- Caleb -->
 
-            <article class="product" data-character="Caleb">
+            <article class="product">
 
-                <div class="product-image-container">
-
-                    <img
-                        src="caleb-ita-bag.jpg"
-                        alt="Caleb Ita Bag">
-
-                </div>
+                <img
+                    src="caleb-ita-bag.jpg"
+                    alt="Caleb ita bag">
 
                 <h3>Caleb Ita Bag</h3>
 
-                <p class="character">
-                    ✈ Caleb
-                </p>
-
-                <p class="description">
-                    Carry your favorite pins and treasures wherever you go.
+                <p>
+                    An ita bag for carrying your favorite collectibles.
                 </p>
 
                 <p class="price">
                     ₱1,299
                 </p>
 
-                <div class="button-row">
-
-                    <button
-                        class="cart-btn"
-                        onclick="addToCart('Caleb Ita Bag')">
-                        🛒 Add to Cart
-                    </button>
-
-                    <button
-                        class="favorite-btn"
-                        onclick="favorite('Caleb')">
-                        ♡
-                    </button>
-
-                </div>
-
             </article>
 
 
         </div>
 
-    </section>
+    </div>
 
 
-    <!-- =========================
-         FUN ZONE
-    ========================= -->
-
-    <section class="fun-section" id="fun">
-
-        <h2>✦ Deepspace Fun Zone ✦</h2>
-
-        <p>
-            Can't decide who your favorite companion is?
-        </p>
-
-        <p>
-            Let fate decide! ✨
-        </p>
-
-        <button
-            class="companion-button"
-            onclick="pickCharacter()">
-            Choose My Companion ♡
-        </button>
-
-        <p id="message">
-            Your companion is waiting...
-        </p>
-
-    </section>
-
-
-    <!-- =========================
-         CART
-    ========================= -->
-
-    <section class="cart-section" id="cart">
-
-        <h2>🛒 Your Deepspace Cart</h2>
-
-        <p>
-            Items in your cart:
-            <strong id="cartCountBottom">0</strong>
-        </p>
-
-        <p id="cartMessage">
-            Your cart is empty... for now 👀
-        </p>
-
-        <button
-            class="clear-button"
-            onclick="clearCart()">
-            Empty Cart
-        </button>
-
-    </section>
-
-
-    <!-- =========================
-         FOOTER
-    ========================= -->
+    <!-- Footer -->
 
     <footer>
 
@@ -925,192 +288,7 @@
             Made for fellow Deepspace Hunters ♡
         </p>
 
-        <p>
-            Xavier · Zayne · Rafayel · Sylus · Caleb
-        </p>
-
     </footer>
-
-
-    <!-- POPUP -->
-
-    <div id="popup">
-        Added to your cart! ♡
-    </div>
-
-
-    <!-- =========================
-         JAVASCRIPT
-    ========================= -->
-
-    <script>
-
-        /* CART */
-
-        let cartCount = 0;
-
-
-        function addToCart(product) {
-
-            cartCount++;
-
-            document.getElementById("cartCount").textContent = cartCount;
-
-            document.getElementById("cartCountBottom").textContent = cartCount;
-
-            document.getElementById("cartMessage").textContent =
-                product + " has been added to your cart! ♡";
-
-            showPopup(product + " added to cart! ♡");
-        }
-
-
-        function clearCart() {
-
-            cartCount = 0;
-
-            document.getElementById("cartCount").textContent = 0;
-
-            document.getElementById("cartCountBottom").textContent = 0;
-
-            document.getElementById("cartMessage").textContent =
-                "Your cart is empty... for now 👀";
-
-            showPopup("Your cart has been cleared!");
-        }
-
-
-        /* FAVORITES */
-
-        function favorite(character) {
-
-            document.getElementById("message").textContent =
-                "♡ " + character +
-                " has been added to your favorites! ♡";
-
-            showPopup(character + " is now a favorite! ♡");
-        }
-
-
-        /* RANDOM CHARACTER */
-
-        function pickCharacter() {
-
-            const characters = [
-                "Xavier ✦",
-                "Zayne ❄",
-                "Rafayel 🌊",
-                "Sylus 🖤",
-                "Caleb ✈"
-            ];
-
-            const randomCharacter =
-                characters[
-                    Math.floor(Math.random() * characters.length)
-                ];
-
-            document.getElementById("message").textContent =
-                "Your Deepspace companion is... " +
-                randomCharacter + " ♡";
-
-        }
-
-
-        /* SEARCH */
-
-        function searchProducts() {
-
-            const search =
-                document
-                .getElementById("searchBox")
-                .value
-                .toLowerCase();
-
-            const products =
-                document.querySelectorAll(".product");
-
-            products.forEach(function(product) {
-
-                const text =
-                    product.textContent.toLowerCase();
-
-                if (text.includes(search)) {
-
-                    product.style.display = "block";
-
-                } else {
-
-                    product.style.display = "none";
-
-                }
-
-            });
-
-        }
-
-
-        /* FILTER */
-
-        function filterProducts(character, button) {
-
-            const products =
-                document.querySelectorAll(".product");
-
-            const buttons =
-                document.querySelectorAll(".filter-button");
-
-            buttons.forEach(function(btn) {
-
-                btn.classList.remove("active");
-
-            });
-
-            button.classList.add("active");
-
-
-            products.forEach(function(product) {
-
-                if (
-                    character === "all" ||
-                    product.dataset.character === character
-                ) {
-
-                    product.style.display = "block";
-
-                } else {
-
-                    product.style.display = "none";
-
-                }
-
-            });
-
-
-            document.getElementById("searchBox").value = "";
-
-        }
-
-
-        /* POPUP */
-
-        function showPopup(message) {
-
-            const popup =
-                document.getElementById("popup");
-
-            popup.textContent = message;
-
-            popup.classList.add("show");
-
-            setTimeout(function() {
-
-                popup.classList.remove("show");
-
-            }, 2200);
-
-        }
-
-    </script>
 
 </body>
 </html>
