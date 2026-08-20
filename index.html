@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Deepspace Lovely Haven</title>
+    <title>Love and Deepspace Shop</title>
 
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f4eff8;
+            background-color: #f8f4ff;
             color: #333;
         }
 
         header {
-            text-align: center;
-            background-color: #5b476b;
+            background: linear-gradient(135deg, #9b7ede, #d8b4fe);
             color: white;
-            padding: 45px 20px;
+            text-align: center;
+            padding: 35px 20px;
         }
 
         header h1 {
@@ -27,47 +27,48 @@
         }
 
         header p {
-            font-size: 18px;
-            margin-top: 12px;
+            font-size: 17px;
+            margin: 10px 0 20px;
         }
 
-        section {
-            max-width: 700px;
-            margin: 35px auto;
-            padding: 25px;
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0 0;
+        }
+
+        nav li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 9px 16px;
+            border-radius: 20px;
+        }
+
+        nav a:hover {
             background-color: white;
-            text-align: center;
-            border-radius: 15px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            color: #7b5bb5;
         }
 
-        section h2 {
-            color: #5b476b;
-        }
-
-        section p {
-            line-height: 1.6;
-        }
-
-        section img {
-            width: 180px;
-            height: 180px;
-            object-fit: contain;
-            margin-top: 10px;
-            border-radius: 10px;
-            background-color: #f4eff8;
-        }
-
-        .shop {
+        main {
             max-width: 1100px;
             margin: 40px auto;
             padding: 20px;
-            text-align: center;
         }
 
-        .shop h2 {
-            color: #5b476b;
-            font-size: 30px;
+        .welcome {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .welcome h2 {
+            color: #7655a8;
         }
 
         .products {
@@ -75,45 +76,48 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 25px;
-            margin-top: 25px;
         }
 
-        .product {
-            width: 220px;
+        article {
+            width: 250px;
             background-color: white;
             padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 18px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(100, 70, 130, 0.15);
             transition: transform 0.2s;
         }
 
-        .product:hover {
-            transform: translateY(-5px);
+        article:hover {
+            transform: translateY(-6px);
         }
 
-        .product h3 {
-            color: #5b476b;
-            margin-bottom: 8px;
+        article img {
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        article h3 {
+            color: #7655a8;
+            font-size: 21px;
         }
 
         .price {
+            color: #c05b91;
             font-weight: bold;
-            color: #7a5c8c;
+            font-size: 18px;
         }
 
-        .product img {
-            width: 200px;
-            height: 200px;
-            object-fit: contain;
-            background-color: #f4eff8;
-            border-radius: 10px;
-            margin-top: 10px;
+        article p {
+            line-height: 1.5;
         }
 
         footer {
-            text-align: center;
-            background-color: #5b476b;
+            background-color: #7655a8;
             color: white;
+            text-align: center;
             padding: 25px;
             margin-top: 50px;
         }
@@ -122,172 +126,136 @@
 
 <body>
 
-    <!-- Shop Name and Tagline -->
-
     <header>
 
-        <h1>✦ Deepspace Lovely Haven ✦</h1>
+        <h1>💜 Love and Deepspace Shop 💜</h1>
 
         <p>
-            A cozy shop for Love and Deepspace merchandise and collectibles.
+            Your cozy little shop for Love and Deepspace-inspired treasures.
         </p>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
 
     </header>
 
+    <main>
 
-    <!-- Owner Section -->
+        <div class="welcome">
 
-    <section>
+            <h2>✨ Our Products ✨</h2>
 
-        <h2>Mazel</h2>
-
-        <p>
-            I am a Love and Deepspace fan who created this shop
-            to share fun merchandise with fellow fans.
-        </p>
-
-        <img
-            src="xavier-plushie.jfif"
-            alt="Xavier plushie from Deepspace Lovely Haven">
-
-    </section>
-
-
-    <!-- Products Section -->
-
-    <div class="shop">
-
-        <h2>♡ Our Products ♡</h2>
-
-        <p>
-            Take a look at some of the merchandise available in our shop!
-        </p>
-
-
-        <div class="products">
-
-
-            <!-- Xavier Product -->
-
-            <article class="product">
-
-                <h3>Xavier Plushie</h3>
-
-                <p class="price">
-                    ₱899
-                </p>
-
-                <p>
-                    A cute and soft plushie for Xavier fans.
-                </p>
-
-                <img
-                    src="xavier-plushie.jfif"
-                    alt="Xavier plushie">
-
-            </article>
-
-
-            <!-- Zayne Product -->
-
-            <article class="product">
-
-                <h3>Zayne Hoodie</h3>
-
-                <p class="price">
-                    ₱1,499
-                </p>
-
-                <p>
-                    A cozy hoodie inspired by Zayne.
-                </p>
-
-                <img
-                    src="zayne-hoodie.jpg"
-                    alt="Zayne hoodie">
-
-            </article>
-
-
-            <!-- Rafayel Product -->
-
-            <article class="product">
-
-                <h3>Rafayel Figure</h3>
-
-                <p class="price">
-                    ₱1,199
-                </p>
-
-                <p>
-                    A collectible figure for Rafayel fans.
-                </p>
-
-                <img
-                    src="rafayel-nendoroid.jpg"
-                    alt="Rafayel figure">
-
-            </article>
-
-
-            <!-- Sylus Product -->
-
-            <article class="product">
-
-                <h3>Sylus Perfume</h3>
-
-                <p class="price">
-                    ₱1,799
-                </p>
-
-                <p>
-                    A mysterious perfume inspired by Sylus.
-                </p>
-
-                <img
-                    src="sylus-perfume.webp"
-                    alt="Sylus perfume">
-
-            </article>
-
-
-            <!-- Caleb Product -->
-
-            <article class="product">
-
-                <h3>Caleb Ita Bag</h3>
-
-                <p class="price">
-                    ₱1,299
-                </p>
-
-                <p>
-                    An ita bag for carrying your favorite collectibles.
-                </p>
-
-                <img
-                    src="caleb-ita-bag.jpg"
-                    alt="Caleb ita bag">
-
-            </article>
-
+            <p>
+                Bring a little Love and Deepspace magic into your collection!
+            </p>
 
         </div>
 
-    </div>
+        <div class="products">
 
+            <article>
 
-    <!-- Footer -->
+                <img
+                    src="xavier.jpg"
+                    alt="Xavier plushie">
+
+                <h3>Xavier Plushie</h3>
+
+                <p class="price">₱850</p>
+
+                <p>
+                    A soft and adorable Xavier plushie,
+                    perfect for cuddling or displaying
+                    in your collection.
+                </p>
+
+            </article>
+
+            <article>
+
+                <img
+                    src="zayne.jpg"
+                    alt="Zayne hoodie">
+
+                <h3>Zayne Hoodie</h3>
+
+                <p class="price">₱1,500</p>
+
+                <p>
+                    A cozy hoodie inspired by Zayne,
+                    perfect for fans who want something
+                    comfortable and stylish.
+                </p>
+
+            </article>
+
+            <article>
+
+                <img
+                    src="rafayel.jpg"
+                    alt="Rafayel figure">
+
+                <h3>Rafayel Figure</h3>
+
+                <p class="price">₱1,200</p>
+
+                <p>
+                    A detailed Rafayel figure that makes
+                    a fun addition to any Love and Deepspace
+                    collection.
+                </p>
+
+            </article>
+
+            <article>
+
+                <img
+                    src="sylus.jpg"
+                    alt="Sylus perfume">
+
+                <h3>Sylus Perfume</h3>
+
+                <p class="price">₱1,800</p>
+
+                <p>
+                    A stylish perfume inspired by Sylus,
+                    made for fans who want something elegant
+                    and mysterious.
+                </p>
+
+            </article>
+
+            <article>
+
+                <img
+                    src="caleb.jpg"
+                    alt="Caleb ita bag">
+
+                <h3>Caleb Ita Bag</h3>
+
+                <p class="price">₱1,350</p>
+
+                <p>
+                    A cute ita bag inspired by Caleb,
+                    perfect for carrying your essentials
+                    while showing off your favorite character.
+                </p>
+
+            </article>
+
+        </div>
+
+    </main>
 
     <footer>
 
-        <p>
-            ✦ Deepspace Lovely Haven ✦
-        </p>
-
-        <p>
-            Made for fellow Deepspace Hunters ♡
-        </p>
+        <p>💜 Love and Deepspace Shop 💜</p>
+        <p>Made with love for fellow Hunters ✨</p>
 
     </footer>
 
