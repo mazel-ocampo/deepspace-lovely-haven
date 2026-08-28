@@ -36,9 +36,14 @@
             color: white;
             text-decoration: none;
             font-weight: bold;
-            background-color: rgba(255,255,255,0.2);
+            background-color: rgba(255, 255, 255, 0.2);
             padding: 9px 16px;
             border-radius: 20px;
+        }
+
+        nav a:hover {
+            background-color: white;
+            color: #7655a8;
         }
 
         main {
@@ -47,11 +52,12 @@
             padding: 20px;
         }
 
-        .product-card, .order-form {
-            background: white;
+        .product-card,
+        .order-form {
+            background-color: white;
             padding: 30px;
             border-radius: 18px;
-            box-shadow: 0 5px 15px rgba(100,70,130,0.15);
+            box-shadow: 0 5px 15px rgba(100, 70, 130, 0.15);
             margin-bottom: 30px;
         }
 
@@ -65,7 +71,16 @@
             border-radius: 18px;
         }
 
-        h1, h2 {
+        .order-form img {
+            width: 180px;
+            max-width: 100%;
+            display: block;
+            margin: 0 auto 20px;
+            border-radius: 15px;
+        }
+
+        h1,
+        h2 {
             color: #7655a8;
         }
 
@@ -81,7 +96,8 @@
             margin-top: 25px;
         }
 
-        th, td {
+        th,
+        td {
             border: 1px solid #d8b4fe;
             padding: 12px;
             text-align: left;
@@ -92,7 +108,7 @@
             color: #7655a8;
         }
 
-        .order-form label {
+        label {
             display: block;
             margin-top: 15px;
             margin-bottom: 7px;
@@ -138,6 +154,10 @@
             cursor: pointer;
         }
 
+        button:hover {
+            background-color: #5f4389;
+        }
+
         footer {
             background-color: #7655a8;
             color: white;
@@ -149,115 +169,181 @@
 
 <body>
 
-<header>
-    <h1>💜 Love and Deepspace Shop 💜</h1>
+    <header>
+        <h1>💜 Love and Deepspace Shop 💜</h1>
 
-    <nav>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../about.html">About</a></li>
-            <li><a href="../contact.html">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<main>
+    <main>
 
-    <section class="product-card">
+        <section class="product-card">
 
-        <h1>Sylus Perfume</h1>
+            <h1>Sylus Perfume</h1>
 
-        <img src="../sylus.jpg" alt="Elegant Sylus-inspired perfume">
+            <img
+                src="../sylus-perfume.webp"
+                alt="Sylus-inspired perfume">
 
-        <p class="price">₱1,800</p>
+            <p class="price">₱1,800</p>
 
-        <p>
-            A stylish fragrance inspired by Sylus. This perfume is made
-            to feel elegant, mysterious, and memorable, making it a
-            special addition to any fan's collection.
-        </p>
+            <p>
+                A stylish fragrance inspired by Sylus. This perfume is designed
+                to feel elegant, mysterious, and memorable, making it a special
+                addition to any fan's collection.
+            </p>
 
-        <table>
-            <tr>
-                <th>Type</th>
-                <td>Eau de Parfum</td>
-            </tr>
-            <tr>
-                <th>Size</th>
-                <td>50 ml</td>
-            </tr>
-            <tr>
-                <th>Style</th>
-                <td>Elegant and mysterious</td>
-            </tr>
-            <tr>
-                <th>Price</th>
-                <td>₱1,800</td>
-            </tr>
-        </table>
+            <table>
+                <tr>
+                    <th>Type</th>
+                    <td>Eau de Parfum</td>
+                </tr>
 
-    </section>
+                <tr>
+                    <th>Size</th>
+                    <td>50 ml</td>
+                </tr>
 
-    <section class="order-form">
+                <tr>
+                    <th>Style</th>
+                    <td>Elegant and mysterious</td>
+                </tr>
 
-        <h2>🛒 Order Enquiry</h2>
+                <tr>
+                    <th>Price</th>
+                    <td>₱1,800</td>
+                </tr>
+            </table>
 
-        <p>Interested in ordering the Sylus Perfume? Send us an enquiry!</p>
+        </section>
 
-        <form>
+        <section class="order-form">
 
-            <label for="sylus-quantity">Quantity</label>
-            <input type="number" id="sylus-quantity" name="quantity"
-                   min="1" max="20" value="1">
+            <img
+                src="../sylus-perfume.webp"
+                alt="Sylus-inspired perfume">
 
-            <fieldset>
-                <legend>How would you like your order delivered?</legend>
+            <h2>🛒 Order Enquiry</h2>
 
-                <div class="choice">
-                    <input type="radio" id="sylus-delivery"
-                           name="sylus-delivery-method" value="delivery">
-                    <label for="sylus-delivery">Delivery</label>
+            <p>
+                Interested in ordering the Sylus Perfume?
+                Send us an enquiry!
+            </p>
 
-                    <input type="radio" id="sylus-pickup"
-                           name="sylus-delivery-method" value="pickup">
-                    <label for="sylus-pickup">Store pickup</label>
-                </div>
-            </fieldset>
+            <form>
 
-            <fieldset>
-                <legend>Optional Extras</legend>
+                <label for="sylus-quantity">Quantity</label>
 
-                <div class="choice">
-                    <input type="checkbox" id="sylus-gift-wrap"
-                           name="sylus-extras" value="gift-wrap">
-                    <label for="sylus-gift-wrap">Gift wrapping</label>
+                <input
+                    type="number"
+                    id="sylus-quantity"
+                    name="quantity"
+                    min="1"
+                    max="20"
+                    value="1">
 
-                    <input type="checkbox" id="sylus-express"
-                           name="sylus-extras" value="express">
-                    <label for="sylus-express">Express handling</label>
+                <fieldset>
 
-                    <input type="checkbox" id="sylus-note"
-                           name="sylus-extras" value="note">
-                    <label for="sylus-note">Add a special note</label>
-                </div>
-            </fieldset>
+                    <legend>
+                        How would you like your order delivered?
+                    </legend>
 
-            <label for="sylus-email">Contact Email</label>
-            <input type="email" id="sylus-email"
-                   name="email" required>
+                    <div class="choice">
 
-            <button type="submit">Send order enquiry</button>
+                        <input
+                            type="radio"
+                            id="sylus-delivery"
+                            name="delivery-method"
+                            value="delivery">
 
-        </form>
+                        <label for="sylus-delivery">
+                            Delivery
+                        </label>
 
-    </section>
+                        <input
+                            type="radio"
+                            id="sylus-pickup"
+                            name="delivery-method"
+                            value="pickup">
 
-</main>
+                        <label for="sylus-pickup">
+                            Store pickup
+                        </label>
 
-<footer>
-    <p>💜 Love and Deepspace Shop 💜</p>
-    <p>Made with love for fellow Hunters ✨</p>
-</footer>
+                    </div>
+
+                </fieldset>
+
+                <fieldset>
+
+                    <legend>Optional Extras</legend>
+
+                    <div class="choice">
+
+                        <input
+                            type="checkbox"
+                            id="sylus-gift-wrap"
+                            name="extras"
+                            value="gift-wrap">
+
+                        <label for="sylus-gift-wrap">
+                            Gift wrapping
+                        </label>
+
+                        <input
+                            type="checkbox"
+                            id="sylus-express"
+                            name="extras"
+                            value="express">
+
+                        <label for="sylus-express">
+                            Express handling
+                        </label>
+
+                        <input
+                            type="checkbox"
+                            id="sylus-note"
+                            name="extras"
+                            value="note">
+
+                        <label for="sylus-note">
+                            Add a special note
+                        </label>
+
+                    </div>
+
+                </fieldset>
+
+                <label for="sylus-email">
+                    Contact Email
+                </label>
+
+                <input
+                    type="email"
+                    id="sylus-email"
+                    name="email"
+                    required>
+
+                <button type="submit">
+                    Send order enquiry
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>💜 Love and Deepspace Shop 💜</p>
+        <p>Made with love for fellow Hunters ✨</p>
+    </footer>
 
 </body>
 </html>
