@@ -5,9 +5,11 @@
 :root {
     --brand: #7655a8;
     --brand-dark: #5f4389;
+    --accent: #c05b91;
     --ink: #333333;
     --muted: #c9b6e4;
     --background: #f8f4ff;
+    --table-bg: #eee4ff;
     --light: #ffffff;
 }
 
@@ -34,7 +36,11 @@ body {
 ========================= */
 
 header {
-    background: linear-gradient(135deg, #9b7ede, #d8b4fe);
+    background: linear-gradient(
+        135deg,
+        #9b7ede,
+        #d8b4fe
+    );
     color: var(--light);
     text-align: center;
     padding: 35px 20px;
@@ -137,7 +143,7 @@ main {
 }
 
 .price {
-    color: #c05b91;
+    color: var(--accent);
     font-weight: bold;
     font-size: 18px;
 }
@@ -162,15 +168,10 @@ main {
    CONTACT CARD
 ========================= */
 
-.contact-card,
-.product-card,
-.order-form {
-    background-color: var(--light);
-    border-radius: 18px;
-}
-
 .contact-card {
+    background-color: var(--light);
     padding: 35px;
+    border-radius: 18px;
     box-shadow: 0 5px 15px rgba(100, 70, 130, 0.15);
 }
 
@@ -181,6 +182,59 @@ main {
 
 .contact-card > p {
     text-align: center;
+}
+
+
+/* =========================
+   PRODUCT DETAILS
+========================= */
+
+.product-card,
+.order-form {
+    background-color: var(--light);
+    border-radius: 18px;
+    box-shadow: 0 5px 15px rgba(100, 70, 130, 0.15);
+}
+
+.order-form {
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.order-form img {
+    width: 180px;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 15px;
+}
+
+h1,
+h2 {
+    color: var(--brand);
+}
+
+
+/* =========================
+   TABLES
+========================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+}
+
+th,
+td {
+    border: 1px solid var(--muted);
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--table-bg);
+    color: var(--brand);
 }
 
 
@@ -227,6 +281,12 @@ textarea {
     resize: vertical;
 }
 
+.choice label {
+    display: inline;
+    margin-right: 20px;
+    font-weight: normal;
+}
+
 
 /* =========================
    FORM FOCUS
@@ -260,59 +320,6 @@ button,
 button:hover,
 .send-button:hover {
     background-color: var(--brand-dark);
-}
-
-
-/* =========================
-   PRODUCT DETAILS
-========================= */
-
-.product-card,
-.order-form {
-    padding: 30px;
-    box-shadow: 0 5px 15px rgba(100, 70, 130, 0.15);
-    margin-bottom: 30px;
-}
-
-.product-card img {
-    border-radius: 18px;
-}
-
-.order-form img {
-    width: 180px;
-    max-width: 100%;
-    display: block;
-    margin: 0 auto 20px;
-    border-radius: 15px;
-}
-
-h1,
-h2 {
-    color: var(--brand);
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 25px;
-}
-
-th,
-td {
-    border: 1px solid var(--muted);
-    padding: 12px;
-    text-align: left;
-}
-
-th {
-    background-color: #eee4ff;
-    color: var(--brand);
-}
-
-.choice label {
-    display: inline;
-    margin-right: 20px;
-    font-weight: normal;
 }
 
 
