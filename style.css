@@ -1,19 +1,19 @@
 /* =========================
-   1. VARIABLES
+   VARIABLES
 ========================= */
 
 :root {
-    --brand-color: #9b7ede;
-    --dark-ink: #333333;
-    --muted-grey: #777777;
-    --light-background: #f8f4ff;
-    --light-purple: #d8b4fe;
-    --accent-color: #c05b91;
+    --brand: #7655a8;
+    --brand-dark: #5f4389;
+    --ink: #333333;
+    --muted: #c9b6e4;
+    --background: #f8f4ff;
+    --light: #ffffff;
 }
 
 
 /* =========================
-   2. BASE STYLES
+   BASE STYLES
 ========================= */
 
 * {
@@ -23,28 +23,19 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: var(--light-background);
-    color: var(--dark-ink);
-}
-
-img {
-    max-width: 100%;
-    height: auto;
+    line-height: 1.5;
+    background-color: var(--background);
+    color: var(--ink);
 }
 
 
 /* =========================
-   3. LAYOUT REGIONS
+   HEADER AND NAVIGATION
 ========================= */
 
 header {
-    background: linear-gradient(
-        135deg,
-        var(--brand-color),
-        var(--light-purple)
-    );
-    color: white;
+    background: linear-gradient(135deg, #9b7ede, #d8b4fe);
+    color: var(--light);
     text-align: center;
     padding: 35px 20px;
 }
@@ -55,14 +46,9 @@ header h1 {
 }
 
 header p {
-    margin: 10px 0 20px;
     font-size: 17px;
+    margin: 10px 0 20px;
 }
-
-
-/* =========================
-   NAVIGATION
-========================= */
 
 nav ul {
     list-style: none;
@@ -76,7 +62,7 @@ nav li {
 }
 
 nav a {
-    color: white;
+    color: var(--light);
     text-decoration: none;
     font-weight: bold;
     background-color: rgba(255, 255, 255, 0.2);
@@ -85,10 +71,14 @@ nav a {
 }
 
 nav a:hover {
-    background-color: white;
-    color: var(--brand-color);
+    background-color: var(--light);
+    color: var(--brand);
 }
 
+
+/* =========================
+   MAIN CONTENT
+========================= */
 
 main {
     max-width: 1100px;
@@ -96,28 +86,19 @@ main {
     padding: 20px;
 }
 
-
-footer {
-    background-color: var(--brand-color);
-    color: white;
-    text-align: center;
-    padding: 25px;
-    margin-top: 50px;
-}
-
-
-/* =========================
-   4. COMPONENTS
-========================= */
-
 .welcome {
     text-align: center;
     margin-bottom: 35px;
 }
 
 .welcome h2 {
-    color: var(--brand-color);
+    color: var(--brand);
 }
+
+
+/* =========================
+   PRODUCT CARDS
+========================= */
 
 .products {
     display: flex;
@@ -126,61 +107,80 @@ footer {
     gap: 25px;
 }
 
-article {
+.product-card {
     width: 250px;
-    background-color: white;
+    background-color: var(--light);
     padding: 20px;
     border-radius: 18px;
+    border-left: 6px solid var(--brand);
+    margin-bottom: 25px;
     text-align: center;
     box-shadow: 0 5px 15px rgba(100, 70, 130, 0.15);
     transition: transform 0.2s;
 }
 
-article:hover {
+.product-card:hover {
     transform: translateY(-6px);
 }
 
-article img {
+.product-card img {
     width: 220px;
     height: 220px;
+    max-width: 100%;
     object-fit: cover;
     border-radius: 15px;
 }
 
-article h3 {
-    color: var(--brand-color);
+.product-card h3 {
+    color: var(--brand);
     font-size: 21px;
 }
 
 .price {
-    color: var(--accent-color);
+    color: #c05b91;
     font-weight: bold;
     font-size: 18px;
 }
 
-
-/* =========================
-   BUTTONS AND LINKS
-========================= */
-
-button,
-.button,
-article a {
+.details-link {
     display: inline-block;
-    background-color: var(--brand-color);
-    color: white;
+    margin-top: 10px;
+    background-color: var(--brand);
+    color: var(--light);
     text-decoration: none;
-    border: none;
-    padding: 10px 18px;
+    padding: 9px 15px;
     border-radius: 20px;
     font-weight: bold;
-    cursor: pointer;
 }
 
-button:hover,
-.button:hover,
-article a:hover {
-    background-color: var(--accent-color);
+.details-link:hover {
+    background-color: var(--brand-dark);
+}
+
+
+/* =========================
+   CONTACT CARD
+========================= */
+
+.contact-card,
+.product-card,
+.order-form {
+    background-color: var(--light);
+    border-radius: 18px;
+}
+
+.contact-card {
+    padding: 35px;
+    box-shadow: 0 5px 15px rgba(100, 70, 130, 0.15);
+}
+
+.contact-card h2 {
+    color: var(--brand);
+    text-align: center;
+}
+
+.contact-card > p {
+    text-align: center;
 }
 
 
@@ -188,91 +188,142 @@ article a:hover {
    FORMS
 ========================= */
 
-form {
-    max-width: 700px;
-    margin: 0 auto;
-}
-
 fieldset {
-    border: 2px solid var(--light-purple);
-    border-radius: 12px;
-    margin-bottom: 20px;
-    padding: 20px;
+    padding: 25px;
+    border: 2px solid var(--muted);
+    border-radius: 15px;
+    margin-top: 20px;
 }
 
 legend {
-    color: var(--brand-color);
+    color: var(--brand);
     font-weight: bold;
+    font-size: 20px;
+    padding: 0 10px;
 }
 
 label {
     display: block;
-    margin-top: 12px;
+    margin-top: 15px;
+    margin-bottom: 7px;
     font-weight: bold;
+    color: var(--brand);
 }
 
 input,
 select,
 textarea {
     width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid var(--light-purple);
-    border-radius: 8px;
-    font-family: inherit;
-    font-size: 16px;
+    padding: 12px;
+    border: 1px solid var(--muted);
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    background-color: var(--background);
 }
 
-input[type="radio"],
-input[type="checkbox"] {
-    width: auto;
-    margin-right: 5px;
+textarea {
+    min-height: 150px;
+    resize: vertical;
 }
 
 
 /* =========================
-   TABLES
+   FORM FOCUS
 ========================= */
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid var(--brand);
+    outline-offset: 2px;
+}
+
+
+/* =========================
+   FORM BUTTONS
+========================= */
+
+button,
+.send-button {
+    margin-top: 25px;
+    background-color: var(--brand);
+    color: var(--light);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover,
+.send-button:hover {
+    background-color: var(--brand-dark);
+}
+
+
+/* =========================
+   PRODUCT DETAILS
+========================= */
+
+.product-card,
+.order-form {
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(100, 70, 130, 0.15);
+    margin-bottom: 30px;
+}
+
+.product-card img {
+    border-radius: 18px;
+}
+
+.order-form img {
+    width: 180px;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 15px;
+}
+
+h1,
+h2 {
+    color: var(--brand);
+}
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 th,
 td {
-    border: 1px solid var(--light-purple);
+    border: 1px solid var(--muted);
     padding: 12px;
     text-align: left;
 }
 
 th {
-    background-color: var(--light-purple);
-    color: var(--dark-ink);
+    background-color: #eee4ff;
+    color: var(--brand);
+}
+
+.choice label {
+    display: inline;
+    margin-right: 20px;
+    font-weight: normal;
 }
 
 
 /* =========================
-   RESPONSIVE DESIGN
+   FOOTER
 ========================= */
 
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 30px;
-    }
-
-    nav li {
-        margin: 5px;
-    }
-
-    article {
-        width: 100%;
-        max-width: 320px;
-    }
-
-    main {
-        margin: 20px auto;
-        padding: 15px;
-    }
+footer {
+    background-color: var(--brand);
+    color: var(--light);
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
 }
