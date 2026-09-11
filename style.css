@@ -9,6 +9,7 @@
     --soft-purple: #eee4ff;
 }
 
+
 /* ---------- Base Styles ---------- */
 
 * {
@@ -131,7 +132,7 @@ main {
 
 .product-card {
     flex: 1 1 240px;
-    max-width: 31%;
+    max-width: calc((100% - 48px) / 3);
     padding: 20px;
     background: var(--white);
     border-left: 6px solid var(--brand);
