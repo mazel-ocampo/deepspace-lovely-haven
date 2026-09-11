@@ -1,7 +1,3 @@
-/* =========================
-   VARIABLES
-========================= */
-
 :root {
     --brand: #7655a8;
     --brand-dark: #5f4389;
@@ -13,10 +9,7 @@
     --soft-purple: #eee4ff;
 }
 
-
-/* =========================
-   BASE
-========================= */
+/* ---------- Base Styles ---------- */
 
 * {
     box-sizing: border-box;
@@ -41,18 +34,14 @@ h3 {
 }
 
 
-/* =========================
-   HEADER
-========================= */
+/* ---------- Header ---------- */
 
 .site-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    padding: 25px 40px;
     min-height: 90px;
-
+    padding: 25px 40px;
     background: linear-gradient(135deg, #9b7ede, #d8b4fe);
 }
 
@@ -70,7 +59,6 @@ h3 {
 .site-header nav ul {
     display: flex;
     gap: 20px;
-
     list-style: none;
     padding: 0;
     margin: 0;
@@ -82,16 +70,12 @@ h3 {
 
 .site-header nav a {
     display: inline-block;
-
     padding: 9px 17px;
     border-radius: 25px;
-
     background: rgba(255, 255, 255, 0.25);
     color: var(--white);
-
     text-decoration: none;
     font-weight: bold;
-
     transition: 0.2s ease;
 }
 
@@ -102,31 +86,24 @@ h3 {
 }
 
 
-/* =========================
-   MAIN
-========================= */
+/* ---------- Main Content ---------- */
 
 main {
     max-width: 1100px;
     margin: 40px auto;
     padding: 20px;
-
     animation: fadeIn 0.5s ease;
 }
 
 
-/* =========================
-   WELCOME
-========================= */
+/* ---------- Welcome Section ---------- */
 
 .welcome {
     min-height: 250px;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     text-align: center;
 }
 
@@ -143,32 +120,22 @@ main {
 }
 
 
-/* =========================
-   PRODUCT CARDS
-========================= */
+/* ---------- Product Grid ---------- */
 
-.products {
+.product-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
+    gap: 24px;
 }
 
 .product-card {
-    width: 250px;
-
+    flex: 1 1 240px;
     padding: 20px;
-    margin-bottom: 25px;
-
     background: var(--white);
-
     border-left: 6px solid var(--brand);
     border-radius: 18px;
-
     text-align: center;
-
     box-shadow: 0 5px 15px rgba(100, 70, 130, 0.15);
-
     transition: 0.2s ease;
 }
 
@@ -193,30 +160,19 @@ main {
     font-weight: bold;
 }
 
-
-/* =========================
-   BUTTONS
-========================= */
-
 .details-link,
 button {
     display: inline-block;
-
     margin-top: 10px;
     padding: 10px 17px;
-
     border: none;
     border-radius: 22px;
-
     background: var(--brand);
     color: var(--white);
-
     text-decoration: none;
     font-family: Arial, sans-serif;
     font-weight: bold;
-
     cursor: pointer;
-
     transition: 0.2s ease;
 }
 
@@ -227,9 +183,7 @@ button:hover {
 }
 
 
-/* =========================
-   CARDS
-========================= */
+/* ---------- Cards ---------- */
 
 .info-card,
 .product-detail,
@@ -237,19 +191,14 @@ button:hover {
 .contact-card {
     padding: 30px;
     margin-bottom: 30px;
-
     background: var(--white);
-
     border-left: 6px solid var(--brand);
     border-radius: 18px;
-
     box-shadow: 0 5px 15px rgba(100, 70, 130, 0.15);
 }
 
 
-/* =========================
-   PRODUCT DETAILS
-========================= */
+/* ---------- Product Details ---------- */
 
 .product-detail h2 {
     text-align: center;
@@ -258,14 +207,10 @@ button:hover {
 
 .product-detail-image {
     display: block;
-
     width: 360px;
     height: 360px;
-
     object-fit: cover;
-
     margin: 20px auto 30px;
-
     border-radius: 20px;
 }
 
@@ -276,9 +221,7 @@ button:hover {
 }
 
 
-/* =========================
-   TABLE
-========================= */
+/* ---------- Tables ---------- */
 
 table {
     width: 100%;
@@ -300,9 +243,7 @@ th {
 }
 
 
-/* =========================
-   FORMS
-========================= */
+/* ---------- Contact Form ---------- */
 
 .contact-card h2 {
     text-align: center;
@@ -315,7 +256,6 @@ th {
 fieldset {
     padding: 25px;
     margin-top: 20px;
-
     border: 2px solid var(--muted);
     border-radius: 15px;
 }
@@ -331,7 +271,6 @@ label {
     display: block;
     margin-top: 15px;
     margin-bottom: 7px;
-
     color: var(--brand);
     font-weight: bold;
 }
@@ -340,14 +279,10 @@ input,
 select,
 textarea {
     width: 100%;
-
     padding: 12px;
-
     border: 1px solid var(--muted);
     border-radius: 10px;
-
     background: var(--background);
-
     font-family: Arial, sans-serif;
     font-size: 15px;
 }
@@ -365,24 +300,18 @@ textarea:focus {
 }
 
 
-/* =========================
-   FOOTER
-========================= */
+/* ---------- Footer ---------- */
 
 footer {
     padding: 25px;
     margin-top: 50px;
-
     background: var(--brand);
     color: var(--white);
-
     text-align: center;
 }
 
 
-/* =========================
-   ANIMATION
-========================= */
+/* ---------- Animation ---------- */
 
 @keyframes fadeIn {
     from {
@@ -397,12 +326,9 @@ footer {
 }
 
 
-/* =========================
-   MOBILE
-========================= */
+/* ---------- Mobile ---------- */
 
 @media (max-width: 700px) {
-
     .site-header {
         flex-direction: column;
         gap: 20px;
