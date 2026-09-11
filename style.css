@@ -124,15 +124,17 @@ main {
 /* ---------- Product Grid / 6.2 ---------- */
 
 .product-grid {
-    width: 100%;
+    width: min(820px, 100%);
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 24px;
 }
 
 .product-card {
     flex: 1 1 240px;
-    max-width: calc((100% - 48px) / 3);
+    max-width: 260px;
     padding: 20px;
     background: var(--white);
     border-left: 6px solid var(--brand);
