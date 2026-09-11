@@ -1,3 +1,125 @@
+:root {
+    --brand: #7655a8;
+    --brand-dark: #5f4389;
+    --pink: #c05b91;
+    --ink: #333333;
+    --muted: #c9b6e4;
+    --background: #f8f4ff;
+    --white: #ffffff;
+    --soft-purple: #eee4ff;
+}
+
+/* ---------- Base Styles ---------- */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: var(--background);
+    color: var(--ink);
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--brand);
+}
+
+
+/* ---------- Header / 6.1 ---------- */
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 90px;
+    padding: 25px 40px;
+    background: linear-gradient(135deg, #9b7ede, #d8b4fe);
+}
+
+.site-header h1 {
+    margin: 0;
+    color: var(--white);
+    font-size: 32px;
+}
+
+.site-header h1::after {
+    content: " ✦";
+    font-size: 18px;
+}
+
+.site-header nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.site-header nav li {
+    margin: 0;
+}
+
+.site-header nav a {
+    display: inline-block;
+    padding: 9px 17px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.25);
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+.site-header nav a:hover {
+    background: var(--white);
+    color: var(--brand);
+    transform: translateY(-2px);
+}
+
+
+/* ---------- Main Content ---------- */
+
+main {
+    width: min(1100px, calc(100% - 40px));
+    margin: 40px auto;
+    padding: 20px;
+    animation: fadeIn 0.5s ease;
+}
+
+
+/* ---------- Welcome / 6.1 Centering ---------- */
+
+.welcome {
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.welcome h2::before {
+    content: "✦ ";
+}
+
+.welcome h2::after {
+    content: " ✦";
+}
+
+.welcome p {
+    max-width: 650px;
+}
+
+
 /* ---------- Product Grid / 6.2 ---------- */
 
 .product-grid {
@@ -5,13 +127,11 @@
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
-    align-items: flex-start;
 }
 
 .product-card {
     flex: 1 1 240px;
-    max-width: 250px;
-    min-width: 0;
+    max-width: 31%;
     padding: 20px;
     background: var(--white);
     border-left: 6px solid var(--brand);
@@ -62,4 +182,147 @@ button {
 button:hover {
     background: var(--brand-dark);
     transform: translateY(-2px);
+}
+
+
+/* ---------- Cards ---------- */
+
+.info-card,
+.product-detail,
+.order-form,
+.contact-card {
+    padding: 30px;
+    margin-bottom: 30px;
+    background: var(--white);
+    border-left: 6px solid var(--brand);
+    border-radius: 18px;
+    box-shadow: 0 5px 15px rgba(100, 70, 130, 0.15);
+}
+
+
+/* ---------- Product Details ---------- */
+
+.product-detail h2 {
+    text-align: center;
+    font-size: 30px;
+}
+
+.product-detail-image {
+    display: block;
+    width: 360px;
+    height: 360px;
+    object-fit: cover;
+    margin: 20px auto 30px;
+    border-radius: 20px;
+}
+
+.product-description {
+    max-width: 750px;
+    margin: 0 auto 25px;
+    text-align: center;
+}
+
+
+/* ---------- Tables ---------- */
+
+table {
+    width: 100%;
+    margin-top: 25px;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid var(--muted);
+    text-align: left;
+}
+
+th {
+    width: 30%;
+    background: var(--soft-purple);
+    color: var(--brand);
+}
+
+
+/* ---------- Contact Form ---------- */
+
+.contact-card h2 {
+    text-align: center;
+}
+
+.contact-card > p {
+    text-align: center;
+}
+
+fieldset {
+    padding: 25px;
+    margin-top: 20px;
+    border: 2px solid var(--muted);
+    border-radius: 15px;
+}
+
+legend {
+    padding: 0 10px;
+    color: var(--brand);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 7px;
+    color: var(--brand);
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--muted);
+    border-radius: 10px;
+    background: var(--background);
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid var(--brand);
+    outline-offset: 2px;
+}
+
+
+/* ---------- Footer ---------- */
+
+footer {
+    padding: 25px;
+    margin-top: 50px;
+    background: var(--brand);
+    color: var(--white);
+    text-align: center;
+}
+
+
+/* ---------- Animation ---------- */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
