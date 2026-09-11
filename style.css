@@ -5,11 +5,9 @@
 :root {
     --brand: #7655a8;
     --brand-dark: #5f4389;
-    --accent: #c05b91;
     --ink: #333333;
     --muted: #c9b6e4;
     --background: #f8f4ff;
-    --table-bg: #eee4ff;
     --light: #ffffff;
 }
 
@@ -35,39 +33,34 @@ body {
    HEADER AND NAVIGATION
 ========================= */
 
-header {
-    background: linear-gradient(
-        135deg,
-        #9b7ede,
-        #d8b4fe
-    );
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #9b7ede, #d8b4fe);
     color: var(--light);
-    text-align: center;
-    padding: 35px 20px;
+    padding: 25px 40px;
 }
 
-header h1 {
+.site-header h1 {
     margin: 0;
-    font-size: 40px;
+    font-size: 32px;
+    color: var(--light);
 }
 
-header p {
-    font-size: 17px;
-    margin: 10px 0 20px;
-}
-
-nav ul {
+.site-header nav ul {
+    display: flex;
+    gap: 20px;
     list-style: none;
     padding: 0;
-    margin: 20px 0 0;
+    margin: 0;
 }
 
-nav li {
-    display: inline-block;
-    margin: 0 10px;
+.site-header nav li {
+    margin: 0;
 }
 
-nav a {
+.site-header nav a {
     color: var(--light);
     text-decoration: none;
     font-weight: bold;
@@ -76,7 +69,7 @@ nav a {
     border-radius: 20px;
 }
 
-nav a:hover {
+.site-header nav a:hover {
     background-color: var(--light);
     color: var(--brand);
 }
@@ -92,7 +85,17 @@ main {
     padding: 20px;
 }
 
+
+/* =========================
+   WELCOME SECTION
+========================= */
+
 .welcome {
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     margin-bottom: 35px;
 }
@@ -137,13 +140,17 @@ main {
     border-radius: 15px;
 }
 
+.product-card h2,
 .product-card h3 {
     color: var(--brand);
+}
+
+.product-card h3 {
     font-size: 21px;
 }
 
 .price {
-    color: var(--accent);
+    color: #8a3f6d;
     font-weight: bold;
     font-size: 18px;
 }
@@ -165,14 +172,19 @@ main {
 
 
 /* =========================
-   CONTACT CARD
+   CONTACT AND ABOUT CARDS
 ========================= */
 
-.contact-card {
+.contact-card,
+.order-form {
     background-color: var(--light);
-    padding: 35px;
     border-radius: 18px;
+    padding: 30px;
     box-shadow: 0 5px 15px rgba(100, 70, 130, 0.15);
+}
+
+.contact-card {
+    border-left: 6px solid var(--brand);
 }
 
 .contact-card h2 {
@@ -184,57 +196,12 @@ main {
     text-align: center;
 }
 
-
-/* =========================
-   PRODUCT DETAILS
-========================= */
-
-.product-card,
-.order-form {
-    background-color: var(--light);
-    border-radius: 18px;
-    box-shadow: 0 5px 15px rgba(100, 70, 130, 0.15);
-}
-
-.order-form {
-    padding: 30px;
-    margin-bottom: 30px;
-}
-
-.order-form img {
-    width: 180px;
-    max-width: 100%;
+.about-image {
     display: block;
-    margin: 0 auto 20px;
+    width: 300px;
+    max-width: 100%;
+    margin: 20px auto;
     border-radius: 15px;
-}
-
-h1,
-h2 {
-    color: var(--brand);
-}
-
-
-/* =========================
-   TABLES
-========================= */
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 25px;
-}
-
-th,
-td {
-    border: 1px solid var(--muted);
-    padding: 12px;
-    text-align: left;
-}
-
-th {
-    background-color: var(--table-bg);
-    color: var(--brand);
 }
 
 
@@ -281,12 +248,6 @@ textarea {
     resize: vertical;
 }
 
-.choice label {
-    display: inline;
-    margin-right: 20px;
-    font-weight: normal;
-}
-
 
 /* =========================
    FORM FOCUS
@@ -324,6 +285,41 @@ button:hover,
 
 
 /* =========================
+   PRODUCT DETAILS
+========================= */
+
+.order-form {
+    margin-bottom: 30px;
+}
+
+.order-form img {
+    width: 180px;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+}
+
+th,
+td {
+    border: 1px solid var(--muted);
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #eee4ff;
+    color: var(--brand);
+}
+
+
+/* =========================
    FOOTER
 ========================= */
 
@@ -333,4 +329,30 @@ footer {
     text-align: center;
     padding: 25px;
     margin-top: 50px;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 700px) {
+
+    .site-header {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .site-header nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .product-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
 }

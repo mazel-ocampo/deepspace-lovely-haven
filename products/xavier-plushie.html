@@ -1,201 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>Xavier Plushie - Deepspace Lovely Haven!</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xavier Plushie - Love and Deepspace Shop</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
 
-    <header>
+<header class="site-header">
 
-        <h1>💜 Deepspace Lovely Haven! 💜</h1>
+    <h1>Love and Deepspace Shop</h1>
 
-        <nav>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../about.html">About</a></li>
-                <li><a href="../contact.html">Contact</a></li>
-            </ul>
-        </nav>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
-    </header>
+</header>
 
-    <main>
+<main>
 
-        <section class="product-detail">
+    <section class="product-card">
 
-            <h1>Xavier Plushie</h1>
+        <img
+            src="../xavierplushie.jfif"
+            alt="Xavier Plushie"
+        >
 
-            <img
-                src="../xavier-plushie.jfif"
-                alt="Xavier plushie">
+        <h2>Xavier Plushie</h2>
 
-            <p class="price">₱850</p>
+        <p>
+            Bring home a cute Xavier plushie inspired by
+            the beloved character from Love and Deepspace.
+            Its soft design makes it a great companion for
+            fans and collectors.
+        </p>
 
-            <p>
-                Bring Xavier into your collection with this soft and adorable
-                plushie. It is perfect for cuddling, decorating your room,
-                or displaying with your other Love and Deepspace treasures.
-            </p>
+        <table>
+            <tr>
+                <th>Product</th>
+                <td>Xavier Plushie</td>
+            </tr>
+            <tr>
+                <th>Price</th>
+                <td>₱850</td>
+            </tr>
+            <tr>
+                <th>Material</th>
+                <td>Soft Plush Fabric</td>
+            </tr>
+            <tr>
+                <th>Character</th>
+                <td>Xavier</td>
+            </tr>
+            <tr>
+                <th>Best For</th>
+                <td>Fans and Collectors</td>
+            </tr>
+        </table>
 
-            <table>
-                <tr>
-                    <th>Material</th>
-                    <td>Soft plush fabric</td>
-                </tr>
+    </section>
 
-                <tr>
-                    <th>Size</th>
-                    <td>Approximately 25 cm</td>
-                </tr>
+    <section class="order-form">
 
-                <tr>
-                    <th>Colour</th>
-                    <td>Inspired by Xavier's design</td>
-                </tr>
+        <h2>Order Inquiry</h2>
 
-                <tr>
-                    <th>Price</th>
-                    <td>₱850</td>
-                </tr>
-            </table>
+        <form action="#" method="post">
 
-        </section>
+            <fieldset>
 
+                <legend>Your Information</legend>
 
-        <section class="order-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
 
-            <img
-                src="../xavier-plushie.jfif"
-                alt="Xavier plushie">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
 
-            <h2>🛒 Order Enquiry</h2>
-
-            <p>
-                Interested in ordering the Xavier Plushie?
-                Send us an enquiry!
-            </p>
-
-            <form>
-
-                <label for="xavier-quantity">Quantity</label>
-
+                <label for="quantity">Quantity:</label>
                 <input
                     type="number"
-                    id="xavier-quantity"
+                    id="quantity"
                     name="quantity"
                     min="1"
-                    max="20"
-                    value="1">
+                    required
+                >
 
-                <fieldset>
+                <button type="submit">Send Inquiry</button>
 
-                    <legend>
-                        How would you like your order delivered?
-                    </legend>
+            </fieldset>
 
-                    <div class="choice">
+        </form>
 
-                        <input
-                            type="radio"
-                            id="xavier-delivery"
-                            name="delivery-method"
-                            value="delivery">
+    </section>
 
-                        <label for="xavier-delivery">
-                            Delivery
-                        </label>
+</main>
 
-                        <input
-                            type="radio"
-                            id="xavier-pickup"
-                            name="delivery-method"
-                            value="pickup">
-
-                        <label for="xavier-pickup">
-                            Store pickup
-                        </label>
-
-                    </div>
-
-                </fieldset>
-
-                <fieldset>
-
-                    <legend>Optional Extras</legend>
-
-                    <div class="choice">
-
-                        <input
-                            type="checkbox"
-                            id="xavier-gift-wrap"
-                            name="extras"
-                            value="gift-wrap">
-
-                        <label for="xavier-gift-wrap">
-                            Gift wrapping
-                        </label>
-
-                        <input
-                            type="checkbox"
-                            id="xavier-express"
-                            name="extras"
-                            value="express">
-
-                        <label for="xavier-express">
-                            Express handling
-                        </label>
-
-                        <input
-                            type="checkbox"
-                            id="xavier-note"
-                            name="extras"
-                            value="note">
-
-                        <label for="xavier-note">
-                            Add a special note
-                        </label>
-
-                    </div>
-
-                </fieldset>
-
-                <label for="xavier-email">
-                    Contact Email
-                </label>
-
-                <input
-                    type="email"
-                    id="xavier-email"
-                    name="email"
-                    required>
-
-                <button type="submit">
-                    Send order enquiry
-                </button>
-
-            </form>
-
-        </section>
-
-    </main>
-
-    <footer>
-
-        <p>💜 Deepspace Lovely Haven! 💜</p>
-
-        <p>Made with love for fellow Hunters ✨</p>
-
-    </footer>
+<footer>
+    <p>&copy; 2026 Love and Deepspace Shop. All rights reserved.</p>
+</footer>
 
 </body>
-
 </html>

@@ -1,42 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>Contact - Deepspace Lovely Haven!</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Love and Deepspace Shop</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
+<header class="site-header">
 
-    <h1>💜 Deepspace Lovely Haven! 💜</h1>
-
-    <p>
-        Your cozy little shop for Love and Deepspace-inspired treasures.
-    </p>
+    <h1>Love and Deepspace Shop</h1>
 
     <nav>
         <ul>
-
-            <li>
-                <a href="index.html">Home</a>
-            </li>
-
-            <li>
-                <a href="about.html">About</a>
-            </li>
-
-            <li>
-                <a href="contact.html">Contact</a>
-            </li>
-
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
@@ -46,80 +27,60 @@
 
     <section class="contact-card">
 
-        <h2>💌 Contact Us</h2>
+        <h2>Contact Us</h2>
 
         <p>
-            Have a question about our products or your order?
-            Send us a message and we will be happy to help!
+            Have a question about our products? Send us a message
+            and we will be happy to help.
         </p>
 
-        <ul class="contact-methods">
-
-            <li>
-                Email: Please use the contact form below.
-            </li>
-
-            <li>
-                Message: Fill out the form and tell us how
-                we can help.
-            </li>
-
-        </ul>
-
-        <form>
+        <form action="#" method="post">
 
             <fieldset>
 
-                <legend>Your Details</legend>
+                <legend>Contact Details</legend>
 
-                <label for="name">Name</label>
-
+                <label for="name">Name:</label>
                 <input
                     type="text"
                     id="name"
                     name="name"
-                    required>
+                    required
+                >
 
-                <label for="email">Email</label>
-
+                <label for="email">Email:</label>
                 <input
                     type="email"
                     id="email"
                     name="email"
-                    required>
+                    required
+                >
 
-                <label for="subject">Subject</label>
-
-                <select
-                    id="subject"
-                    name="subject">
-
+                <label for="subject">Subject:</label>
+                <select id="subject" name="subject" required>
+                    <option value="">Choose a subject</option>
                     <option value="product-question">
-                        Product question
+                        Product Question
                     </option>
-
                     <option value="order-status">
-                        Order status
+                        Order Status
                     </option>
-
-                    <option value="product-request">
-                        Product request
+                    <option value="wholesale">
+                        Wholesale Enquiry
                     </option>
-
                     <option value="other">
-                        Something else
+                        Something Else
                     </option>
-
                 </select>
 
-                <label for="message">Message</label>
-
+                <label for="message">Message:</label>
                 <textarea
                     id="message"
                     name="message"
-                    required></textarea>
+                    required
+                ></textarea>
 
-                <button type="submit">
+                <button type="submit" class="send-button">
                     Send message
                 </button>
 
@@ -132,15 +93,8 @@
 </main>
 
 <footer>
-
-    <p>💜 Deepspace Lovely Haven! 💜</p>
-
-    <p>
-        Made with love for fellow Hunters ✨
-    </p>
-
+    <p>&copy; 2026 Love and Deepspace Shop. All rights reserved.</p>
 </footer>
 
 </body>
-
 </html>

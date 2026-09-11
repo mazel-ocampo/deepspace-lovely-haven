@@ -1,203 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>Rafayel Figure - Deepspace Lovely Haven!</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rafayel Figure - Love and Deepspace Shop</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
 
-    <header>
+<header class="site-header">
 
-        <h1>💜 Deepspace Lovely Haven! 💜</h1>
+    <h1>Love and Deepspace Shop</h1>
 
-        <nav>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../about.html">About</a></li>
-                <li><a href="../contact.html">Contact</a></li>
-            </ul>
-        </nav>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
-    </header>
+</header>
 
-    <main>
+<main>
 
-        <section class="product-detail">
+    <section class="product-card">
 
-            <h1>Rafayel Figure</h1>
+        <img
+            src="../rafayelnendoroid.jpg"
+            alt="Rafayel Nendoroid Figure"
+        >
 
-            <img
-                src="../rafayel-nendoroid.jpg"
-                alt="Rafayel Nendoroid figure">
+        <h2>Rafayel Figure</h2>
 
-            <p class="price">₱1,200</p>
+        <p>
+            Add this adorable Rafayel figure to your collection.
+            It is a fun display piece for fans who want to keep
+            their favorite character close.
+        </p>
 
-            <p>
-                Add a little artistic charm to your collection with this
-                detailed Rafayel Nendoroid figure. It is a fun display piece
-                inspired by his unique style and personality.
-            </p>
+        <table>
+            <tr>
+                <th>Product</th>
+                <td>Rafayel Figure</td>
+            </tr>
+            <tr>
+                <th>Price</th>
+                <td>₱1,200</td>
+            </tr>
+            <tr>
+                <th>Type</th>
+                <td>Collectible Figure</td>
+            </tr>
+            <tr>
+                <th>Character</th>
+                <td>Rafayel</td>
+            </tr>
+            <tr>
+                <th>Best For</th>
+                <td>Display and Collecting</td>
+            </tr>
+        </table>
 
-            <table>
+    </section>
 
-                <tr>
-                    <th>Material</th>
-                    <td>PVC</td>
-                </tr>
+    <section class="order-form">
 
-                <tr>
-                    <th>Size</th>
-                    <td>Approximately 20 cm</td>
-                </tr>
+        <h2>Order Inquiry</h2>
 
-                <tr>
-                    <th>Colour</th>
-                    <td>Multicoloured character design</td>
-                </tr>
+        <form action="#" method="post">
 
-                <tr>
-                    <th>Price</th>
-                    <td>₱1,200</td>
-                </tr>
+            <fieldset>
 
-            </table>
+                <legend>Your Information</legend>
 
-        </section>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
 
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
 
-        <section class="order-form">
-
-            <img
-                src="../rafayel-nendoroid.jpg"
-                alt="Rafayel Nendoroid figure">
-
-            <h2>🛒 Order Enquiry</h2>
-
-            <p>
-                Interested in ordering the Rafayel Figure?
-                Send us an enquiry!
-            </p>
-
-            <form>
-
-                <label for="rafayel-quantity">Quantity</label>
-
+                <label for="quantity">Quantity:</label>
                 <input
                     type="number"
-                    id="rafayel-quantity"
+                    id="quantity"
                     name="quantity"
                     min="1"
-                    max="20"
-                    value="1">
+                    required
+                >
 
-                <fieldset>
+                <button type="submit">Send Inquiry</button>
 
-                    <legend>
-                        How would you like your order delivered?
-                    </legend>
+            </fieldset>
 
-                    <div class="choice">
+        </form>
 
-                        <input
-                            type="radio"
-                            id="rafayel-delivery"
-                            name="delivery-method"
-                            value="delivery">
+    </section>
 
-                        <label for="rafayel-delivery">
-                            Delivery
-                        </label>
+</main>
 
-                        <input
-                            type="radio"
-                            id="rafayel-pickup"
-                            name="delivery-method"
-                            value="pickup">
-
-                        <label for="rafayel-pickup">
-                            Store pickup
-                        </label>
-
-                    </div>
-
-                </fieldset>
-
-                <fieldset>
-
-                    <legend>Optional Extras</legend>
-
-                    <div class="choice">
-
-                        <input
-                            type="checkbox"
-                            id="rafayel-gift-wrap"
-                            name="extras"
-                            value="gift-wrap">
-
-                        <label for="rafayel-gift-wrap">
-                            Gift wrapping
-                        </label>
-
-                        <input
-                            type="checkbox"
-                            id="rafayel-express"
-                            name="extras"
-                            value="express">
-
-                        <label for="rafayel-express">
-                            Express handling
-                        </label>
-
-                        <input
-                            type="checkbox"
-                            id="rafayel-note"
-                            name="extras"
-                            value="note">
-
-                        <label for="rafayel-note">
-                            Add a special note
-                        </label>
-
-                    </div>
-
-                </fieldset>
-
-                <label for="rafayel-email">
-                    Contact Email
-                </label>
-
-                <input
-                    type="email"
-                    id="rafayel-email"
-                    name="email"
-                    required>
-
-                <button type="submit">
-                    Send order enquiry
-                </button>
-
-            </form>
-
-        </section>
-
-    </main>
-
-    <footer>
-
-        <p>💜 Deepspace Lovely Haven! 💜</p>
-
-        <p>Made with love for fellow Hunters ✨</p>
-
-    </footer>
+<footer>
+    <p>&copy; 2026 Love and Deepspace Shop. All rights reserved.</p>
+</footer>
 
 </body>
-
 </html>
